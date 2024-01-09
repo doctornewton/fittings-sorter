@@ -1,0 +1,32 @@
+def fittings_sorter():
+  print("Welcome, please select shape of fitting: ")
+  x = input():
+  
+  pass
+
+def shape():
+  # display different shape choices available "Straight, 90, 45, T, Cross"
+  a = "Straight"
+  b = "90"
+  c = "45"
+  d = "T"
+  e = "Cross"
+  
+
+  pass
+
+def type():
+# Display different fitting types available "Male Tube, Female Tube, Male Pipe, Female Pipe, Male ORFS, Female ORFS, 
+  pass
+
+def size():
+s1 = "-4"
+s2 = "-6"
+s3 = "-8"
+s4 = "-10"
+s5 = "-12"
+s6 = "-16"
+s7 = "-20"
+  pass
+  
+# Need to define every single fitting type nomenclature i.e. FF6802 = 90 Male Male ORFS
