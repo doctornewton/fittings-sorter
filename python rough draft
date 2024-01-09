@@ -1,10 +1,32 @@
+shape_list = ['Straight', '90', '45', 'Tee', 'Cross']
+size_list = ['-4', '-6', '-8', '-10', '-12', '-16', '-20']
+type_list = ['Male JIC', 'Female JIC']
+
 def fittings_sorter():
   print("Welcome, please select shape of fitting: ")
-
 # Error message when fitting type not found / not available
-  x = input():
-  
-  pass
+# ^^^^^ Not needed when selecting from a predetermined list
+shape_record = display(shape_list)
+get_list(record)
+
+
+def display(shape_list):
+    counter = 0
+    shape_record = {}
+    for tables in shape_list:
+        counter += 1
+        shape_record[counter] = tables
+        print("%s. %s" % (counter, tables))
+    return shape_record
+
+def get_list(shape_record):
+    print("\:")
+    choose = input()
+    choose = int(choose)
+
+    if choose in shape_record:        
+        print(shape_record[choose])
+
 
 def shape():
   # display different shape choices available "Straight, 90, 45, T, Cross"
@@ -30,5 +52,111 @@ s5 = "-12"
 s6 = "-16"
 s7 = "-20"
   pass
+  
+# Need to define every single fitting type nomenclature i.e. FF6802 = 90 Male Male ORFS
+
+
+-------------------------
+
+
+
+shape_list = ['Straight', '90', '45', 'Tee', 'Cross']
+size_list = ['-4', '-6', '-8', '-10', '-12', '-16', '-20']
+type_list = ['Male JIC', 'Female JIC']
+
+li = ['ID', 'Customers', 'Employees', 'Orders']
+
+def display(shape_list):
+    print("Welcome, please select a fitting shape below") 
+    #Iterate through the list using enumerate and print
+    for idx, tables in enumerate(shape_list):
+        print("%s. %s" % (idx+1, tables))
+
+def get_list(shape_list):
+    choose = int(input("\nPick a shape:"))-1
+    #If choose is not a valid index in list, print error and return empty string
+    
+    if choose < 0 or choose > (len(shape_list)-1):
+        print('Invalid Choice')
+        return ''
+    #Else return chosen string
+        return shape_list[choose]
+
+def main():
+    display(shape_list)
+    print(get_list(shape_list))
+
+
+if __name__ == "__main__":
+    main()
+    
+    
+    
+    
+# def action1():
+#     print "action1"
+# def action2():
+#     print "action2"
+# def action3():
+#     print "action3"
+# def default():
+#     print "default action"
+
+# def main():
+#     choices = {"a":action1,"b":action2,"c":action3}
+#     choice = raw_input("a, b, or c \n")
+#     action = choices.get(choice, default)
+#     action()
+
+
+# if __name__ == "__main__":
+#     main()
+
+
+# def fittings_sorter():
+#   print("Welcome, please select shape of fitting: ")
+
+
+# def display(shape_list):
+#     counter = 0
+#     shape_record = {}
+#     for tables in shape_list:
+#         counter += 1
+#         shape_record[counter] = tables
+#         print("%s. %s" % (counter, tables))
+#     return shape_record
+
+# def get_list(shape_record):
+#     print("Select from the choices above")
+#     choose = input()
+#     choose = int(choose)
+
+#     if choose in shape_record:        
+#         print(shape_record[choose])
+
+
+# fittings_sorter()
+# shape_record = display(shape_list)
+# get_list(shape_record)
+
+
+# def display(shape_list):
+#     counter = 0
+#     shape_record = {}
+#     for tables in shape_list:
+#         counter += 1
+#         shape_record[counter] = tables
+#         print("%s. %s" % (counter, tables))
+#     return shape_record
+
+# def get_list(shape_record):
+#     print("\:")
+#     choose = input()
+#     choose = int(choose)
+
+
+
+  # display different shape choices available "Straight, 90, 45, T, Cross"
+# Display different fitting types available "Male Tube, Female Tube, Male Pipe, Female Pipe, Male ORFS, Female ORFS, 
   
 # Need to define every single fitting type nomenclature i.e. FF6802 = 90 Male Male ORFS
