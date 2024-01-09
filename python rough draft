@@ -1,5 +1,7 @@
 def fittings_sorter():
   print("Welcome, please select shape of fitting: ")
+
+# Error message when fitting type not found / not available
   x = input():
   
   pass
