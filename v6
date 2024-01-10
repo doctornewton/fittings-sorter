@@ -10,7 +10,7 @@ type_list = ['Male JIC', 'Female JIC', 'Male Pipe', 'Female Pipe', 'Bulkhead', '
 def fitting_selector():
     choice1 = '' ## This allows the while loop to run its loop first
     print("Welcome to The Fitting Finder")
-    while choice1 != '1' and choice1 != '2' and choice1 != '3' and choice1 != '4' and choice1 != '5' and choice1 != '6':
+    while choice1 != '1' and choice1 != '2' and choice1 != '3' and choice1 != '4' and choice1 != '5' and choice1 != '6' and choice1 != '7':
         
         print("Please select fitting shape and press enter: ")
         for i in shape_list:
