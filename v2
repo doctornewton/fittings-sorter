@@ -1,0 +1,45 @@
+shape_list = ['Straight', '90', '45', 'Tee', 'Cross', 'Exit']
+size_list = ['-4', '-6', '-8', '-10', '-12', '-16', '-20', 'Back']
+type_list = ['Male JIC', 'Female JIC', 'Back']
+
+def fitting_selector():
+    choice1 = '' ## This allows the while loop to run its loop first
+    print("Welcome to the fitting finder")
+    #
+    
+    while choice1 != '1' and choice1 != '2' and choice1 != '3' and choice1 != '4' and choice1 != '5' and choice1 != '6':
+        print("Please select fitting shape and press enter: ")
+        for i in (shape_list):
+            print(shape_list.index(i) +1, end ='')
+            print(" ",i)
+            choice1 = input()
+    
+    if choice1 == '1':
+        
+        print(" Fitting shape = Straight Connector")
+        
+        fit_type()
+        
+        
+    if choice == '2':
+        print('nice')
+    if choice == '3':
+        print('nice')
+    if choice == '4':
+        print('nice')
+    if choice == '5':
+        print('nice')
+    if choice == '6':
+        print('Exit')    
+
+def fit_type():
+   choice2 = '' ## This allows the while loop to run its loop first
+   print("Please Select first fitting end type and press enter ")
+   while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
+        print()
+        for i in type_list:
+            print(type_list.index(i) +1, end='')
+            print(" ",i)
+        choice = input()
+
+fitting_selector()
