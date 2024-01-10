@@ -1,378 +1,371 @@
 import time
 
-
 shape_list = ['Straight', '90', '45', 'Tee', 'Cross', 'Cap', 'Exit']
 size_list = ['-4', '-6', '-8', '-10', '-12', '-16', '-20', 'Back']
-type_list = ['Male JIC', 'Female JIC', 'Male Pipe', 'Female Pipe', 'Bulkhead', 'Female JIC Swivel', 'Male O-ring', 'Female O-ring', 'Male Adj. O-ring', 'Female Pipe Swivel', 'Beaded', 'Gauge Port', 'Bore', 'Male ORFS', 'Female ORFS', 'ORFS Bulkhead', 'ORFS Female Swivel', 'O-ring Gauge Port', 'Back'
+type_list = [
+    'Male JIC', 'Female JIC', 'Male Pipe', 'Female Pipe', 'Bulkhead',
+    'Female JIC Swivel', 'Male O-ring', 'Female O-ring', 'Male Adj. O-ring',
+    'Female Pipe Swivel', 'Beaded', 'Gauge Port', 'Bore', 'Male ORFS',
+    'Female ORFS', 'ORFS Bulkhead', 'ORFS Female Swivel', 'O-ring Gauge Port',
+    'Back'
 ]
 
-
-def fitting_selector():
-    choice1 = '' ## This allows the while loop to run its loop first
-    print("Welcome to The Fitting Finder")
-    while choice1 != '1' and choice1 != '2' and choice1 != '3' and choice1 != '4' and choice1 != '5' and choice1 != '6' and choice1 != '7':
-        
-        print("Please select fitting shape and press enter: ")
-        for i in shape_list:
-            print(shape_list.index(i) +1, end=' ')
-            print(" ",i)
-        choice1 = input()
+                 
+def side2():
+  def size_choice():
+    print('Please choose the size of the 1st fitting type:')
+    print(fit_type1)
+    print("program over bitch, go home")
+  
+  
+  side2type = ''
+  print("Please Select second fitting end type and press enter ")
+  print()
+  while side2type not in type_list:
     
-    if choice1 == '1':
-        print(" Fitting shape = Straight Connector")
-        fit_type1()
-        
-    if choice1 == '2':
-        print('Fitting shape = 90\' Elbow')
-        fit_type2()
-    if choice1 == '3':
-        print('Fitting shape = 45\' Elbow')
-        fit_type3()
-    if choice1 == '4':
-        print('Fitting shape = Tee')
-        fit_type4()
-    if choice1 == '5':
-        print('Fitting shape = Cross')
-        fit_type5()
-    if choice1 == '6':
-        print('Fitting shape = Cap')    
-        fit_type6()
-    if choice1 == '7':
-        print("Why would you start this if you were just going to close it? WTF?!")
-        time.sleep(3)
-        exit()
+    print()
+    for i in type_list:
+      print(type_list.index(i) + 1, end='')
+      print(" ", i)
+    side2type = input()
+
+    if side2type == '1':
+      print("nice")
+      size_choice()
+    if side2type == '2':
+      print('lol')
+      size_choice()
+
+      
 
 def fit_type1():
-   choice2 = '' ## This allows the while loop to run its loop first
-   print("Please Select first fitting end type and press enter ")
-   while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
-        print()
-        for i in type_list:
-            print(type_list.index(i) +1, end='')
-            print(" ",i)
-        choice2 = input()
+  choice2 = '' 
+  print("Please Select first fitting end type and press enter ")
+  while choice2 not in type_list:
+  
+    print()
+    for i in type_list:
+      print(type_list.index(i) + 1, end='')
+      print(" ", i)
+    choice2 = input()
+    
+    if choice2 == '1':
+      print('Male JIC')
+      side2()
+    if choice2 == '2':
+      print('Female JIC')
+      side2()
+  # if choice2 != '1' and choice2 != '2':
+  #     print("Please select from the AVAILABLE options")
+  #     time.sleep(0.5)
+  #     print("idiot")
+  #     time.sleep(1)
+  #     fit_type1()
 
-        if choice2 == '1':
-            print('nice')
-        if choice2 == '2':
-            print('nice')
-        if choice2 == '3':
-            print('nice')
-        if choice2 == '4':
-            print('nice')
-        if choice2 == '5':
-            print('nice')
-        if choice2 == '6':
-            print('nice')
-        if choice2 == '7':
-            print('nice')
-        if choice2 == '8':
-            print('nice')
-        if choice2 == '9':
-            print('nice')
-        if choice2 == '10':
-            print('nice')
-        if choice2 == '11':
-            print('nice')
-        if choice2 == '12':
-            print('nice')
-        if choice2 == '13':
-            print('nice')
-        if choice2 == '14':
-            print('nice')
-        if choice2 == '15':
-            print('nice')
-        if choice2 == '16':
-            print('nice')
-        if choice2 == '17':
-            print('nice')
-        if choice2 == '18':
-            print('nice')    
-        if choice2 == '19':
-            print("Idiot")
-            time.sleep(1)
-            fitting_selector()
-        
+    if choice2 == '19':
+      print("Ok I guess we already fucked up....Idiot")
+      time.sleep(2)
+      input("Press enter to continue")
+      fitting_selector()
+
+  return choice2
+  
+
 def fit_type2():
-   choice2 = '' ## This allows the while loop to run its loop first
-   print("Please Select first fitting end type and press enter ")
-   while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
-        print()
-        for i in type_list:
-            print(type_list.index(i) +1, end='')
-            print(" ",i)
-        choice2 = input()
+  choice2 = ''  ## This allows the while loop to run its loop first
+  print("Please Select first fitting end type and press enter ")
+  while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
+    print()
+    for i in type_list:
+      print(type_list.index(i) + 1, end='')
+      print(" ", i)
+    choice2 = input()
 
-        if choice2 == '1':
-            print('nice')
-        if choice2 == '2':
-            print('nice')
-        if choice2 == '3':
-            print('nice')
-        if choice2 == '4':
-            print('nice')
-        if choice2 == '5':
-            print('nice')
-        if choice2 == '6':
-            print('nice')
-        if choice2 == '7':
-            print('nice')
-        if choice2 == '8':
-            print('nice')
-        if choice2 == '9':
-            print('nice')
-        if choice2 == '10':
-            print('nice')
-        if choice2 == '11':
-            print('nice')
-        if choice2 == '12':
-            print('nice')
-        if choice2 == '13':
-            print('nice')
-        if choice2 == '14':
-            print('nice')
-        if choice2 == '15':
-            print('nice')
-        if choice2 == '16':
-            print('nice')
-        if choice2 == '17':
-            print('nice')
-        if choice2 == '18':
-            print('nice')
-        if choice2 == '19':
-            print("Idiot")
-            time.sleep(1)
-            fitting_selector()
-
+    if choice2 == '1':
+      print('nice')
+    if choice2 == '2':
+      print('nice')
+    if choice2 == '3':
+      print('nice')
+    if choice2 == '4':
+      print('nice')
+    if choice2 == '5':
+      print('nice')
+    if choice2 == '6':
+      print('nice')
+    if choice2 == '7':
+      print('nice')
+    if choice2 == '8':
+      print('nice')
+    if choice2 == '9':
+      print('nice')
+    if choice2 == '10':
+      print('nice')
+    if choice2 == '11':
+      print('nice')
+    if choice2 == '12':
+      print('nice')
+    if choice2 == '13':
+      print('nice')
+    if choice2 == '14':
+      print('nice')
+    if choice2 == '15':
+      print('nice')
+    if choice2 == '16':
+      print('nice')
+    if choice2 == '17':
+      print('nice')
+    if choice2 == '18':
+      print('nice')
+    if choice2 == '19':
+      print("Idiot")
+      time.sleep(1)
+      fitting_selector()
 
 def fit_type3():
-   choice2 = '' ## This allows the while loop to run its loop first
-   print("Please Select first fitting end type and press enter ")
-   while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
-        print()
-        for i in type_list:
-            print(type_list.index(i) +1, end='')
-            print(" ",i)
-        choice2 = input()
+  choice2 = ''  ## This allows the while loop to run its loop first
+  print("Please Select first fitting end type and press enter ")
+  while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
+    print()
+    for i in type_list:
+      print(type_list.index(i) + 1, end='')
+      print(" ", i)
+    choice2 = input()
 
-        if choice2 == '1':
-            print('nice')
-        if choice2 == '2':
-            print('nice')
-        if choice2 == '3':
-            print('nice')
-        if choice2 == '4':
-            print('nice')
-        if choice2 == '5':
-            print('nice')
-        if choice2 == '6':
-            print('nice')
-        if choice2 == '7':
-            print('nice')
-        if choice2 == '8':
-            print('nice')
-        if choice2 == '9':
-            print('nice')
-        if choice2 == '10':
-            print('nice')
-        if choice2 == '11':
-            print('nice')
-        if choice2 == '12':
-            print('nice')
-        if choice2 == '13':
-            print('nice')
-        if choice2 == '14':
-            print('nice')
-        if choice2 == '15':
-            print('nice')
-        if choice2 == '16':
-            print('nice')
-        if choice2 == '17':
-            print('nice')
-        if choice2 == '18':
-            print('nice')
-        if choice2 == '19':
-            print("Idiot")
-            time.sleep(1)
-            fitting_selector()
+    if choice2 == '1':
+      print('nice')
+    if choice2 == '2':
+      print('nice')
+    if choice2 == '3':
+      print('nice')
+    if choice2 == '4':
+      print('nice')
+    if choice2 == '5':
+      print('nice')
+    if choice2 == '6':
+      print('nice')
+    if choice2 == '7':
+      print('nice')
+    if choice2 == '8':
+      print('nice')
+    if choice2 == '9':
+      print('nice')
+    if choice2 == '10':
+      print('nice')
+    if choice2 == '11':
+      print('nice')
+    if choice2 == '12':
+      print('nice')
+    if choice2 == '13':
+      print('nice')
+    if choice2 == '14':
+      print('nice')
+    if choice2 == '15':
+      print('nice')
+    if choice2 == '16':
+      print('nice')
+    if choice2 == '17':
+      print('nice')
+    if choice2 == '18':
+      print('nice')
+    if choice2 == '19':
+      print("Idiot")
+      time.sleep(1)
+      fitting_selector()
 
 
 def fit_type4():
-   choice2 = '' ## This allows the while loop to run its loop first
-   print("Please Select first fitting end type and press enter ")
-   while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
-        print()
-        for i in type_list:
-            print(type_list.index(i) +1, end='')
-            print(" ",i)
-        choice2 = input()
+  choice2 = ''  ## This allows the while loop to run its loop first
+  print("Please Select first fitting end type and press enter ")
+  while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
+    print()
+    for i in type_list:
+      print(type_list.index(i) + 1, end='')
+      print(" ", i)
+    choice2 = input()
 
-        if choice2 == '1':
-            print('nice')
-        if choice2 == '2':
-            print('nice')
-        if choice2 == '3':
-            print('nice')
-        if choice2 == '4':
-            print('nice')
-        if choice2 == '5':
-            print('nice')
-        if choice2 == '6':
-            print('nice')
-        if choice2 == '7':
-            print('nice')
-        if choice2 == '8':
-            print('nice')
-        if choice2 == '9':
-            print('nice')
-        if choice2 == '10':
-            print('nice')
-        if choice2 == '11':
-            print('nice')
-        if choice2 == '12':
-            print('nice')
-        if choice2 == '13':
-            print('nice')
-        if choice2 == '14':
-            print('nice')
-        if choice2 == '15':
-            print('nice')
-        if choice2 == '16':
-            print('nice')
-        if choice2 == '17':
-            print('nice')
-        if choice2 == '18':
-            print('nice')
-        if choice2 == '19':
-            print("Idiot")
-            time.sleep(1)
-            fitting_selector()
-
+    if choice2 == '1':
+      print('nice')
+    if choice2 == '2':
+      print('nice')
+    if choice2 == '3':
+      print('nice')
+    if choice2 == '4':
+      print('nice')
+    if choice2 == '5':
+      print('nice')
+    if choice2 == '6':
+      print('nice')
+    if choice2 == '7':
+      print('nice')
+    if choice2 == '8':
+      print('nice')
+    if choice2 == '9':
+      print('nice')
+    if choice2 == '10':
+      print('nice')
+    if choice2 == '11':
+      print('nice')
+    if choice2 == '12':
+      print('nice')
+    if choice2 == '13':
+      print('nice')
+    if choice2 == '14':
+      print('nice')
+    if choice2 == '15':
+      print('nice')
+    if choice2 == '16':
+      print('nice')
+    if choice2 == '17':
+      print('nice')
+    if choice2 == '18':
+      print('nice')
+    if choice2 == '19':
+      print("Idiot")
+      time.sleep(1)
+      fitting_selector()
 
 
 def fit_type5():
-   choice2 = '' ## This allows the while loop to run its loop first
-   print("Please Select first fitting end type and press enter ")
-   while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
-        print()
-        for i in type_list:
-            print(type_list.index(i) +1, end='')
-            print(" ",i)
-        choice2 = input()
+  choice2 = ''  ## This allows the while loop to run its loop first
+  print("Please Select first fitting end type and press enter ")
+  while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
+    print()
+    for i in type_list:
+      print(type_list.index(i) + 1, end='')
+      print(" ", i)
+    choice2 = input()
 
-        if choice2 == '1':
-            print('nice')
-        if choice2 == '2':
-            print('nice')
-        if choice2 == '3':
-            print('nice')
-        if choice2 == '4':
-            print('nice')
-        if choice2 == '5':
-            print('nice')
-        if choice2 == '6':
-            print('nice')
-        if choice2 == '7':
-            print('nice')
-        if choice2 == '8':
-            print('nice')
-        if choice2 == '9':
-            print('nice')
-        if choice2 == '10':
-            print('nice')
-        if choice2 == '11':
-            print('nice')
-        if choice2 == '12':
-            print('nice')
-        if choice2 == '13':
-            print('nice')
-        if choice2 == '14':
-            print('nice')
-        if choice2 == '15':
-            print('nice')
-        if choice2 == '16':
-            print('nice')
-        if choice2 == '17':
-            print('nice')
-        if choice2 == '18':
-            print('nice')    
-        if choice2 == '19':
-            print("Idiot")
-            time.sleep(1)
-            fitting_selector()
-
+    if choice2 == '1':
+      print('nice')
+    if choice2 == '2':
+      print('nice')
+    if choice2 == '3':
+      print('nice')
+    if choice2 == '4':
+      print('nice')
+    if choice2 == '5':
+      print('nice')
+    if choice2 == '6':
+      print('nice')
+    if choice2 == '7':
+      print('nice')
+    if choice2 == '8':
+      print('nice')
+    if choice2 == '9':
+      print('nice')
+    if choice2 == '10':
+      print('nice')
+    if choice2 == '11':
+      print('nice')
+    if choice2 == '12':
+      print('nice')
+    if choice2 == '13':
+      print('nice')
+    if choice2 == '14':
+      print('nice')
+    if choice2 == '15':
+      print('nice')
+    if choice2 == '16':
+      print('nice')
+    if choice2 == '17':
+      print('nice')
+    if choice2 == '18':
+      print('nice')
+    if choice2 == '19':
+      print("Idiot")
+      time.sleep(1)
+      fitting_selector()
 
 
 def fit_type6():
-   choice2 = '' ## This allows the while loop to run its loop first
-   print("Please Select first fitting end type and press enter ")
-   while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
-        print()
-        for i in type_list:
-            print(type_list.index(i) +1, end='')
-            print(" ",i)
-        choice2 = input()
+  choice2 = ''  ## This allows the while loop to run its loop first
+  print("Please Select first fitting end type and press enter ")
+  while choice2 != '1' and choice2 != '2' and choice2 != '3' and choice2 != '4' and choice2 != '5' and choice2 != '6':
+    print()
+    for i in type_list:
+      print(type_list.index(i) + 1, end='')
+      print(" ", i)
+    choice2 = input()
 
-        if choice2 == '1':
-            print('nice')
-        if choice2 == '2':
-            print('nice')
-        if choice2 == '3':
-            print('nice')
-        if choice2 == '4':
-            print('nice')
-        if choice2 == '5':
-            print('nice')
-        if choice2 == '6':
-            print('nice')
-        if choice2 == '7':
-            print('nice')
-        if choice2 == '8':
-            print('nice')
-        if choice2 == '9':
-            print('nice')
-        if choice2 == '10':
-            print('nice')
-        if choice2 == '11':
-            print('nice')
-        if choice2 == '12':
-            print('nice')
-        if choice2 == '13':
-            print('nice')
-        if choice2 == '14':
-            print('nice')
-        if choice2 == '15':
-            print('nice')
-        if choice2 == '16':
-            print('nice')
-        if choice2 == '17':
-            print('nice')
-        if choice2 == '18':
-            print('nice')
-        if choice2 == '19':
-            print("Idiot")
-            time.sleep(1)
-            fitting_selector()
+    if choice2 == '1':
+      print('nice')
+    if choice2 == '2':
+      print('nice')
+    if choice2 == '3':
+      print('nice')
+    if choice2 == '4':
+      print('nice')
+    if choice2 == '5':
+      print('nice')
+    if choice2 == '6':
+      print('nice')
+    if choice2 == '7':
+      print('nice')
+    if choice2 == '8':
+      print('nice')
+    if choice2 == '9':
+      print('nice')
+    if choice2 == '10':
+      print('nice')
+    if choice2 == '11':
+      print('nice')
+    if choice2 == '12':
+      print('nice')
+    if choice2 == '13':
+      print('nice')
+    if choice2 == '14':
+      print('nice')
+    if choice2 == '15':
+      print('nice')
+    if choice2 == '16':
+      print('nice')
+    if choice2 == '17':
+      print('nice')
+    if choice2 == '18':
+      print('nice')
+    if choice2 == '19':
+      print("Idiot")
+      time.sleep(1)
+      fitting_selector()
 
+def fitting_selector():
+  choice1 = ''  # This allows the while loop to run its loop first
+  print("Welcome to The Fitting Finder")
+  while choice1 != '1' and choice1 != '2' and choice1 != '3' and choice1 != '4' and choice1 != '5' and choice1 != '6' and choice1 != '7':
+
+    print("Please select fitting shape and press enter: ")
+    for i in shape_list:
+      print(shape_list.index(i) + 1, end=' ')
+      print(" ", i)
+    choice1 = input()
+
+  if choice1 == '1':
+    print(" Fitting shape = Straight Connector")
+    print()
+    fit_type1()
+
+  if choice1 == '2':
+    print('Fitting shape = 90\' Elbow')
+    fit_type2()
+  if choice1 == '3':
+    print('Fitting shape = 45\' Elbow')
+    fit_type3()
+  if choice1 == '4':
+    print('Fitting shape = Tee')
+    fit_type4()
+  if choice1 == '5':
+    print('Fitting shape = Cross')
+    fit_type5()
+  if choice1 == '6':
+    print('Fitting shape = Cap')
+    fit_type6()
+  if choice1 == '7':
+    print(
+        "Why would you start this if you were just going to close it? Idiot..."
+    )
+    time.sleep(3)
+    exit()
 
 
 fitting_selector()
-
-# Male Tube
-# Female Tube 
-# Male Pipe
-# Female Pipe
-# Bulkhead
-# Female Tube Swivel
-# Male O-ring
-# Female O-ring
-# Male Adj. O-ring
-# Female Pipe Swivel
-# Beaded
-# Gauge Port
-# Bore
-# Male ORFS
-# Female ORFS
-# ORFS Bulkhead
-# ORFS Female Swivel
-# O-ring Gauge Port
