@@ -38,7 +38,7 @@ def fitting_selector():
         print('Fitting shape = Cap')    
         fit_type6()
     if choice1 == '7':
-        print("thanks prick")
+        print("Why would you start this if you were just going to close it? WTF?!")
         time.sleep(3)
         exit()
 
